@@ -19,9 +19,11 @@ preferencesWindow.loadURL('file://' + path.join(__dirname, DEV
   : '/preferences.production.html'
 ))
 
-preferencesWindow.webContents.on('new-window', e => {
-  e.preventDefault()
-})
+// preferencesWindow.loadURL('file://' + path.join(__dirname, 'test2.html'))
+
+// preferencesWindow.webContents.on('new-window', e => {
+//   e.preventDefault()
+// })
 
 preferencesWindow.on('close', e => {
   e.preventDefault()

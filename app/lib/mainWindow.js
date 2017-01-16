@@ -17,18 +17,23 @@ const mainWindow = new BrowserWindow({
   }
 })
 
+
 mainWindow.loadURL('file://' + path.join(__dirname, DEV
   ? '/main.html'
   : '/main.production.html'
 ))
 
+// mainWindow.webContents.openDevTools();
+
+// mainWindow.loadURL('file://' + path.join(__dirname, "test.html"))
+
 if (OSX) {
   Menu.setApplicationMenu(Menu.buildFromTemplate(menuTemplate))
 }
 
-mainWindow.webContents.on('new-window', e => {
-  e.preventDefault()
-})
+// mainWindow.webContents.on('new-window', e => {
+//   e.preventDefault()
+// })
 
 mainWindow.on('close', e => {
   e.preventDefault()

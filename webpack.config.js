@@ -96,7 +96,7 @@ let config = {
   },
   performance: { hints: false },
   node: {},
-  devtool: 'eval',
+  devtool: 'source-map',
   devServer: {
     hot: true,
     port
