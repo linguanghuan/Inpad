@@ -9,8 +9,8 @@
     "url" : "https://github.com/Sarah-Seo/Inpad.git"
   },
   "scripts": {
-    "start": "electron --debug-brk=5858 app/index.js",
-    "start-dev": "NODE_ENV=development electron app/index.js",
+    "start": "electron app/index.js",
+    "start-dev": "electron --debug-brk=5858 app/index.js",
     "compile": "NODE_ENV=production webpack --config webpack.config.js --progress",
     "analyze": "NODE_ENV=production webpack --config webpack.config.js --json | webpack-bundle-size-analyzer",
     "pack": "env-cmd ./.env build --dir",

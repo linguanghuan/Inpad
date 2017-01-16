@@ -146,5 +146,5 @@ switch (process.env.NODE_ENV) {
     config.node.__dirname = true
     config.resolve.alias.specs = path.join(__dirname, 'specs')
 }
-
+config.devtool = 'inline-source-map';
 module.exports = config
